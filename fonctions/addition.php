@@ -9,6 +9,7 @@ if($_GET) {
     $statement = $pdo->prepare($sql);
     $statement->bindParam(':produit_id', $produit_id, PDO::PARAM_INT);
     $statement->execute();
+    header("location:../public/index.php");
 }
 
 ?>

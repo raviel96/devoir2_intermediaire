@@ -25,8 +25,8 @@ $products = $statement->fetchAll();
         <ul class="list-group list-group-horizontal ">
             <?php foreach($products as $value) :?>
                 <li class="list-group-item d-flex flex-column align-items-center">
-                    <p><?php echo $value['produit_nom'];?></p>
-                    <p><?php echo $value['produit_prix'];?>€</p>
+                    <p class="fs-4"><?php echo $value['produit_nom'];?></p>
+                    <p class="fs-5"><?php echo $value['produit_prix'];?>€</p>
                     <a class="btn btn-primary" href="../fonctions/addition.php?produit_id=<?php echo $value['produit_id']?>" >Ajouter au panier</a>
                 </li>
             <?php endforeach;?>
